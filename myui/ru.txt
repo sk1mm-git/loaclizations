@@ -1,3 +1,3 @@
-myui.test-key=&c1&a2&43
-myui.test2-key=&01111
-myui.tewt3-kay=11111
+myui.test-key=&c1&a2&43&r
+myui.test2-key=&31111&r
+myui.tewt3-kay=11111&r
