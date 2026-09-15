@@ -1,1 +1,4 @@
-
+{
+  "fishing.loot.wand.displayname": "&#7a8085[🥢] | &#abc4d6&lПАЛОЧКА",
+  "fishing.loot."
+}
