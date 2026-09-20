@@ -1,5 +1,5 @@
 {
-  "fishing.loot.wand.displayname": "&#7a8085[🥢] | &#abc4d6&lSTICK",
+  "fishing.loot.wand.displayname": "&#7a8085[🥢] | &#abc4d6&lWAND",
   "fishing.loot.string.displayname": "&#7a8085[⌘] | &#abc4d6&lSTRING",
   "fishing.loot.diamond.dislayname": "&x&7&a&8&0&8&5[¢] | &x&a&b&c&4&d&6&lDIAMOND"
 }
