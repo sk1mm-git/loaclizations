@@ -1,1 +1,7 @@
-
+{
+  "capture.lobby.queue.join": "&#82ff59⏩&#effffc Зᴀйти в очᴇᴘᴇдь",
+  "capture.lobby.queue.leave": "&#FF2B2B⏪&#effffc Выйти иɜ очᴇᴘᴇди",
+  "capture.lobby.queue.underway": "&#ffcc35○ &#effffcИгᴘᴀ ужᴇ идᴇт",
+  "capture.lobby.game.info.displayname": "&#bbededℹ &#effffcИнфоᴘмᴀция о ᴘᴇжимᴇ",
+  "capture.lobby.game.shop": "&#faffbf⛨ &#effffcМᴀгᴀɜин",
+}
