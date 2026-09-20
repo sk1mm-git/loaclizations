@@ -13,8 +13,8 @@
   "capture.lobby.game.chatformat": "&#f987ff⌚ &#effffc%player_name% &#7A8085∙&#effffc {0}",
 
   "capture.shop.title": "Магазин",
-  "capture.shop.gameboost.nameitem": "&x&8&8&e&a&e&aИгровой процесс",
-  "capture.shop.none.nameitem": "&x&f&f&8&4&8&4Пусто",
+  "capture.shop.gameboost.nameitem": "&#88eaeaИгᴘовой пᴘоцᴇсс",
+  "capture.shop.none.nameitem": "&#ff8484Пусто",
   "capture.shop.catigore-gameboost.speed": "&#70BCFFСкорость",
   "capture.shop.catigore-gameboost.speed.description.what_it_offers1": "&7Нажав &#7A8085ПКМ&7 дает скорость II уровня на 4 секунды",
   "capture.shop.buy": "&#FF2B2BКлик &8-&#effffc Купить",
