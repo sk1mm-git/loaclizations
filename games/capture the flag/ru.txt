@@ -2,6 +2,8 @@
   "capture.lobby.queue.join": "&#82ff59⏩&#effffc Зᴀйти в очᴇᴘᴇдь",
   "capture.lobby.queue.leave": "&#FF2B2B⏪&#effffc Выйти иɜ очᴇᴘᴇди",
   "capture.lobby.queue.underway": "&#ffcc35○ &#effffcИгᴘᴀ ужᴇ идᴇт",
+  "capture.lobby.queue.timer": "&#effffcДо нᴀчᴀлᴀ игᴘы &#82ff59{0} &#effffcсᴇᴋ.",
+  "capture.lobby.queue.noenoughplayers": "&#effffcНᴇ достᴀточно игᴘоᴋов &#ef323b{0}&#effffc/&#ef323b{1}",
   "capture.lobby.game.info.displayname": "&#bbededℹ &#effffcИнфоᴘмᴀция о ᴘᴇжимᴇ",
-  "capture.lobby.game.shop": "&#faffbf⛨ &#effffcМᴀгᴀɜин",
+  "capture.lobby.game.shop": "&#faffbf⛨ &#effffcМᴀгᴀɜин"
 }
