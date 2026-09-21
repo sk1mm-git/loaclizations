@@ -20,5 +20,7 @@
   "capture.shop.buy": "&#FF2B2BКлик &8-&#effffc Купить",
   "capture.shop.apply": "&#82ff59⏩ &#effffcПрименить",
   "capture.shop.buy.insufficient_funds": "&#FF2B2B⏩ &#effffcНедостаточно средств!",
-  "capture.shop.buy.successful_payment": "&#82ff59⏩ &#effffcУспешная оплата! &#ffcc35-{0}{1}&r"
+  "capture.shop.buy.successful_payment": "&#82ff59⏩ &#effffcУспешная оплата! &#ffcc35-{0}{1}&r",
+
+  "capture.errors.incompatible_version": "&#FF2B2B⏩ &#effffcНесовместимая версия клиента! &#FF2B2B{0} &8(Требуемая версия &#d2ffad{1}&8)"
 }
