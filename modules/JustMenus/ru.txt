@@ -1,1 +1,5 @@
-{}
+{
+  "jm.hub.welcome": "&c1&a2&43",
+  "jm.hub.nameitem": "&31111",
+  "jm": "11111"
+}
