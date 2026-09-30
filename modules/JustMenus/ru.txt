@@ -1,5 +1,5 @@
 {
   "jm.hub.welcome": "&c1&a2&43",
-  "jm.hub.nameitem": "&31111",
+  "jm.hub.nameitem": "&#FFED7A⌛&#595643 » &#E8E0B0&lНАСТРОЙКИ",
   "jm": "11111"
 }
