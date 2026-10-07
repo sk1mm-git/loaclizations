@@ -1,0 +1,29 @@
+{
+  "capture.lobby.queue.join": "&#82ff59⏩&#effffc Зᴀйти в очᴇᴘᴇдь",
+  "capture.lobby.queue.leave": "&#FF2B2B⏪&#effffc Выйти иɜ очᴇᴘᴇди",
+  "capture.lobby.queue.underway": "&#ffcc35○ &#effffcИгᴘᴀ ужᴇ идᴇт",
+  "capture.lobby.queue.timer": "&#effffcДо нᴀчᴀлᴀ игᴘы &#82ff59{0} &#effffcсᴇᴋ.",
+  "capture.lobby.queue.noenoughplayers": "&#effffcНᴇ достᴀточно игᴘоᴋов &#ef323b{0}&#effffc/&#ef323b{1}",
+
+  "capture.indev": "&#FF2B2B⌚ &lВ РАЗРАБОТКЕ",
+
+  "capture.lobby.game.info.displayname": "&#bbededℹ &#effffcИнфоᴘмᴀция о ᴘᴇжимᴇ",
+  "capture.lobby.game.shop.displayname": "&#faffbf⛨ &#effffcМᴀгᴀɜин",
+  "capture.lobby.game.profile.displayname": "&#effffcПрофиль &#82ff59{0}",
+
+  "capture.lobby.game.chatformat": "&#f987ff⌚ &#effffc%player_name% &#7A8085∙&#effffc {0}",
+
+  "capture.profile.title": "Профиль",
+
+  "capture.shop.title": "Магазин",
+  "capture.shop.gameboost.nameitem": "&#88eaeaИгᴘовой пᴘоцᴇсс",
+  "capture.shop.none.nameitem": "&#ff8484Пусто",
+  "capture.shop.catigore-gameboost.speed": "&#70BCFFСкорость",
+  "capture.shop.catigore-gameboost.speed.description.what_it_offers1": "&7Нажав &#7A8085ПКМ&7 дает скорость II уровня на 4 секунды",
+  "capture.shop.buy": "&#FF2B2BКлик &8-&#effffc Купить",
+  "capture.shop.apply": "&#82ff59⏩ &#effffcПрименить",
+  "capture.shop.buy.insufficient_funds": "&#FF2B2B⏩ &#effffcНедостаточно средств!",
+  "capture.shop.buy.successful_payment": "&#82ff59⏩ &#effffcУспешная оплата! &#ffcc35-{0}{1}&r",
+
+  "capture.errors.incompatible_version": "&#FF2B2B⏩ &#effffcНесовместимая версия клиента! &#FF2B2B{0} &8(Требуемая версия &#d2ffad{1}+&8)"
+}
