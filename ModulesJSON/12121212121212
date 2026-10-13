@@ -1,0 +1,984 @@
+{
+  "handlers": [
+    {
+      "type": "function",
+      "position": 1,
+      "operations": [
+        {
+          "action": "set_variable_replace_text",
+          "values": [
+            {
+              "name": "variable",
+              "value": {
+                "type": "variable",
+                "variable": "message",
+                "scope": "line"
+              }
+            },
+            {
+              "name": "text",
+              "value": {
+                "type": "variable",
+                "variable": "MSG-Punishment.style",
+                "scope": "save"
+              }
+            },
+            {
+              "name": "replace",
+              "value": {
+                "type": "text",
+                "text": "{0}",
+                "parsing": "legacy"
+              }
+            },
+            {
+              "name": "replacement",
+              "value": {
+                "type": "variable",
+                "variable": "MSG-Punishment.style-announcement",
+                "scope": "save"
+              }
+            },
+            {
+              "name": "ignore_case",
+              "value": {
+                "type": "enum",
+                "enum": "TRUE"
+              }
+            },
+            {
+              "name": "first",
+              "value": {
+                "type": "enum",
+                "enum": "ANY"
+              }
+            }
+          ]
+        },
+        {
+          "action": "set_variable_replace_text",
+          "values": [
+            {
+              "name": "variable",
+              "value": {
+                "type": "variable",
+                "variable": "message",
+                "scope": "line"
+              }
+            },
+            {
+              "name": "text",
+              "value": {
+                "type": "variable",
+                "variable": "message",
+                "scope": "line"
+              }
+            },
+            {
+              "name": "replace",
+              "value": {
+                "type": "text",
+                "text": "{1}",
+                "parsing": "legacy"
+              }
+            },
+            {
+              "name": "replacement",
+              "value": {
+                "type": "variable",
+                "variable": "Текст",
+                "scope": "line"
+              }
+            },
+            {
+              "name": "ignore_case",
+              "value": {
+                "type": "enum",
+                "enum": "TRUE"
+              }
+            }
+          ]
+        },
+        {
+          "action": "player_send_message",
+          "selection": {
+            "type": "all_players"
+          },
+          "values": [
+            {
+              "name": "messages",
+              "value": {
+                "type": "array",
+                "values": [
+                  {
+                    "type": "text",
+                    "text": "&f",
+                    "parsing": "legacy"
+                  },
+                  {
+                    "type": "text",
+                    "text": "%var_line(message)&f &7&o(от %player%)",
+                    "parsing": "legacy"
+                  },
+                  {
+                    "type": "text",
+                    "text": "&f",
+                    "parsing": "legacy"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "merging",
+              "value": {
+                "type": "enum",
+                "enum": "SEPARATE_LINES"
+              }
+            }
+          ]
+        },
+        {
+          "action": "repeat_for_each_in_list",
+          "values": [
+            {
+              "name": "index_variable",
+              "value": {
+
+              }
+            },
+            {
+              "name": "value_variable",
+              "value": {
+                "type": "variable",
+                "variable": "pl",
+                "scope": "line"
+              }
+            },
+            {
+              "name": "list",
+              "value": {
+                "type": "game_value",
+                "game_value": "all_players_names",
+                "selection": "null"
+              }
+            }
+          ],
+          "operations": [
+            {
+              "action": "player_play_sound_from_entity",
+              "values": [
+                {
+                  "name": "sounds",
+                  "value": {
+                    "type": "array",
+                    "values": [
+                      {
+                        "type": "sound",
+                        "sound": "minecraft:entity.vindicator.celebrate",
+                        "pitch": 1,
+                        "volume": 1,
+                        "variation": "",
+                        "source": "MASTER"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "name_or_uuid",
+                  "value": {
+                    "type": "variable",
+                    "variable": "pl",
+                    "scope": "line"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "values": [
+        {
+          "name": "parameters",
+          "value": {
+            "type": "array",
+            "values": [
+              {
+                "type": "parameter",
+                "type_key": "singular",
+                "description": "{\"translations\":{}}",
+                "name": "Текст",
+                "value_type": "text",
+                "is_required": "true",
+                "default_value": "{}",
+                "slot": 0,
+                "description_slot": 9
+              }
+            ]
+          }
+        }
+      ],
+      "name": "Обьявление"
+    },
+    {
+      "type": "event",
+      "position": 0,
+      "operations": [
+        {
+          "action": "set_variable_create_list",
+          "values": [
+            {
+              "name": "values",
+              "value": {
+                "type": "array",
+                "values": []
+              }
+            },
+            {
+              "name": "variable",
+              "value": {
+                "type": "variable",
+                "variable": "LAW-Punishment.list",
+                "scope": "save"
+              }
+            }
+          ]
+        },
+        {
+          "action": "set_variable_value",
+          "values": [
+            {
+              "name": "variable",
+              "value": {
+                "type": "variable",
+                "variable": "MSG-Punishment.style",
+                "scope": "save"
+              }
+            },
+            {
+              "name": "value",
+              "value": {
+                "type": "text",
+                "text": "&8⊃&f {0}&8∙&f {1}",
+                "parsing": "legacy"
+              }
+            }
+          ]
+        },
+        {
+          "action": "set_variable_value",
+          "values": [
+            {
+              "name": "variable",
+              "value": {
+                "type": "variable",
+                "variable": "MSG-Punishment.style-announcement",
+                "scope": "save"
+              }
+            },
+            {
+              "name": "value",
+              "value": {
+                "type": "text",
+                "text": "&#DB3636Обьявление",
+                "parsing": "legacy"
+              }
+            }
+          ]
+        }
+      ],
+      "event": "world_start"
+    },
+    {
+      "type": "event",
+      "position": 5,
+      "operations": [
+        {
+          "action": "if_player_has_privilege",
+          "values": [
+            {
+              "name": "privilege",
+              "value": {
+                "type": "enum",
+                "enum": "DEVELOPER"
+              }
+            }
+          ],
+          "operations": [
+            {
+              "action": "if_variable_list_contains_value",
+              "values": [
+                {
+                  "name": "values",
+                  "value": {
+                    "type": "array",
+                    "values": [
+                      {
+                        "type": "game_value",
+                        "game_value": "name",
+                        "selection": "{\"type\":\"default\"}"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "list",
+                  "value": {
+                    "type": "variable",
+                    "variable": "LAW-Punishment.list",
+                    "scope": "save"
+                  }
+                }
+              ],
+              "operations": [
+                {
+                  "action": "set_variable_append_value",
+                  "values": [
+                    {
+                      "name": "values",
+                      "value": {
+                        "type": "array",
+                        "values": [
+                          {
+                            "type": "game_value",
+                            "game_value": "name",
+                            "selection": "{\"type\":\"default\"}"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "name": "variable",
+                      "value": {
+                        "type": "variable",
+                        "variable": "LAW-Punishment.list",
+                        "scope": "save"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "is_inverted": true
+            },
+            {
+              "action": "player_send_message",
+              "values": [
+                {
+                  "name": "messages",
+                  "value": {
+                    "type": "array",
+                    "values": []
+                  }
+                }
+              ]
+            },
+            {
+              "action": "player_set_chat_completions",
+              "values": [
+                {
+                  "name": "completions",
+                  "value": {
+                    "type": "array",
+                    "values": [
+                      {
+                        "type": "text",
+                        "text": ".pun",
+                        "parsing": "legacy"
+                      },
+                      {
+                        "type": "text",
+                        "text": ".pun help",
+                        "parsing": "legacy"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "event": "player_join"
+    },
+    {
+      "type": "event",
+      "position": 4,
+      "operations": [
+        {
+          "action": "if_variable_text_starts_with",
+          "values": [
+            {
+              "name": "compare",
+              "value": {
+                "type": "array",
+                "values": [
+                  {
+                    "type": "text",
+                    "text": ".pun",
+                    "parsing": "legacy"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "value",
+              "value": {
+                "type": "game_value",
+                "game_value": "event_chat_message",
+                "selection": "null"
+              }
+            }
+          ],
+          "operations": [
+            {
+              "action": "set_variable_split_text",
+              "values": [
+                {
+                  "name": "variable",
+                  "value": {
+                    "type": "variable",
+                    "variable": "args",
+                    "scope": "line"
+                  }
+                },
+                {
+                  "name": "text",
+                  "value": {
+                    "type": "game_value",
+                    "game_value": "event_chat_message",
+                    "selection": "null"
+                  }
+                },
+                {
+                  "name": "delimiter",
+                  "value": {
+                    "type": "text",
+                    "text": " ",
+                    "parsing": "legacy"
+                  }
+                }
+              ]
+            },
+            {
+              "action": "if_variable_list_contains_value",
+              "values": [
+                {
+                  "name": "values",
+                  "value": {
+                    "type": "array",
+                    "values": [
+                      {
+                        "type": "game_value",
+                        "game_value": "name",
+                        "selection": "{\"type\":\"default\"}"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "list",
+                  "value": {
+                    "type": "variable",
+                    "variable": "LAW-Punishment.list",
+                    "scope": "save"
+                  }
+                }
+              ],
+              "operations": [
+                {
+                  "action": "if_variable_equals",
+                  "values": [
+                    {
+                      "name": "compare",
+                      "value": {
+                        "type": "array",
+                        "values": [
+                          {
+                            "type": "text",
+                            "text": "help",
+                            "parsing": "legacy"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "name": "value",
+                      "value": {
+                        "type": "text",
+                        "text": "%index_line(args, 1)",
+                        "parsing": "legacy"
+                      }
+                    }
+                  ],
+                  "operations": [
+                    {
+                      "action": "player_play_sound",
+                      "values": []
+                    },
+                    {
+                      "action": "call_function",
+                      "values": [
+                        {
+                          "name": "function_name",
+                          "value": {
+                            "type": "text",
+                            "text": "Помощь",
+                            "parsing": "plain"
+                          }
+                        },
+                        {
+                          "name": "args",
+                          "value": {
+                            "type": "map",
+                            "values": {
+
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "action": "if_variable_equals",
+                  "values": [
+                    {
+                      "name": "compare",
+                      "value": {
+                        "type": "array",
+                        "values": [
+                          {
+                            "type": "text",
+                            "text": "bc",
+                            "parsing": "legacy"
+                          },
+                          {
+                            "type": "text",
+                            "text": "announcement",
+                            "parsing": "legacy"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "name": "value",
+                      "value": {
+                        "type": "text",
+                        "text": "%index_line(args, 1)",
+                        "parsing": "legacy"
+                      }
+                    }
+                  ],
+                  "operations": [
+                    {
+                      "action": "game_cancel_event",
+                      "values": []
+                    },
+                    {
+                      "action": "set_variable_remove_text",
+                      "values": [
+                        {
+                          "name": "remove",
+                          "value": {
+                            "type": "array",
+                            "values": [
+                              {
+                                "type": "text",
+                                "text": ".pun",
+                                "parsing": "legacy"
+                              },
+                              {
+                                "type": "text",
+                                "text": "bc",
+                                "parsing": "legacy"
+                              },
+                              {
+                                "type": "text",
+                                "text": "announcement",
+                                "parsing": "legacy"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "name": "variable",
+                          "value": {
+                            "type": "variable",
+                            "variable": "Ad arguments",
+                            "scope": "local"
+                          }
+                        },
+                        {
+                          "name": "text",
+                          "value": {
+                            "type": "game_value",
+                            "game_value": "event_chat_message",
+                            "selection": "null"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "action": "call_function",
+                      "values": [
+                        {
+                          "name": "function_name",
+                          "value": {
+                            "type": "text",
+                            "text": "Обьявление",
+                            "parsing": "plain"
+                          }
+                        },
+                        {
+                          "name": "args",
+                          "value": {
+                            "type": "map",
+                            "values": {
+                              "{\"type\":\"text\",\"text\":\"Текст\",\"parsing\":\"plain\"}": {
+                                "type": "variable",
+                                "variable": "Ad arguments",
+                                "scope": "local"
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "action": "else",
+              "values": [],
+              "operations": [
+                {
+                  "action": "player_send_message",
+                  "values": [
+                    {
+                      "name": "messages",
+                      "value": {
+                        "type": "array",
+                        "values": [
+                          {
+                            "type": "text",
+                            "text": "&8⊃&f У вас нету &#DB3636прав&f на эту команду!",
+                            "parsing": "legacy"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "action": "player_play_sound",
+                  "values": [
+                    {
+                      "name": "sound",
+                      "value": {
+                        "type": "sound",
+                        "sound": "minecraft:block.fungus.break",
+                        "pitch": 1,
+                        "volume": 1,
+                        "variation": "break4",
+                        "source": "MASTER"
+                      }
+                    },
+                    {
+                      "name": "location",
+                      "value": {
+                        "type": "game_value",
+                        "game_value": "location",
+                        "selection": "{\"type\":\"default\"}"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "event": "player_chat"
+    },
+    {
+      "type": "function",
+      "position": 2,
+      "operations": [
+        {
+          "action": "player_show_inventory_menu",
+          "values": [
+            {
+              "name": "items",
+              "value": {
+                "type": "array",
+                "values": [
+                  {
+                    "type": "item",
+                    "item": "H4sIAAAAAAAA/0XLMQ7CMAwF0B8qJBS6MbGycAdmzsAauUkAi9SOajNwezogsT7pRWDA/kpOt7oYqwCH8w4bLjjNLDUvdPfL1Ci/kjmtUtKjkVnqJHXANutbHECIiFnnrlLFLeL4367anHsqbL3RJ2B8cqnpx2HNXzkolMyGAAAA"
+                  },
+                  {
+                    "type": "item",
+                    "item": "H4sIAAAAAAAA/0XLMQ7CMAwF0B8qJBS6MbGycAdmzsAauUkAi9SOajNwezogsT7pRWDA/kpOt7oYqwCH8w4bLjjNLDUvdPfL1Ci/kjmtUtKjkVnqJHXANutbHECIiFnnrlLFLeL4367anHsqbL3RJ2B8cqnpx2HNXzkolMyGAAAA"
+                  },
+                  {
+                    "type": "item",
+                    "item": "H4sIAAAAAAAA/0XLMQ7CMAwF0B8qJBS6MbGycAdmzsAauUkAi9SOajNwezogsT7pRWDA/kpOt7oYqwCH8w4bLjjNLDUvdPfL1Ci/kjmtUtKjkVnqJHXANutbHECIiFnnrlLFLeL4367anHsqbL3RJ2B8cqnpx2HNXzkolMyGAAAA"
+                  },
+                  {
+                    "type": "item",
+                    "item": "H4sIAAAAAAAA/0XLMQoCQQxG4X9cBBntrOzsvIO1Z7Adwk7UwGwyTGLh7d1CsHwPvgxM2N8o6M7DxRQ4XnbYSMV5EeV50COug2vxoLVreTZyL52UJ2xne2sASBl5tqWbsoZnnP42zFpIL1W8N/okHF5Sufx2WvEXZeoF0IQAAAA="
+                  },
+                  {
+                    "type": "item",
+                    "item": "H4sIAAAAAAAA/0XLMQoCQQxG4X9cBBntrOzsvIO1Z7Adwk7UwGwyTGLh7d1CsHwPvgxM2N8o6M7DxRQ4XnbYSMV5EeV50COug2vxoLVreTZyL52UJ2xne2sASBl5tqWbsoZnnP42zFpIL1W8N/okHF5Sufx2WvEXZeoF0IQAAAA="
+                  },
+                  {
+                    "type": "item",
+                    "item": "H4sIAAAAAAAA/0XLMQoCQQxG4X9cBBntrOzsvIO1Z7Adwk7UwGwyTGLh7d1CsHwPvgxM2N8o6M7DxRQ4XnbYSMV5EeV50COug2vxoLVreTZyL52UJ2xne2sASBl5tqWbsoZnnP42zFpIL1W8N/okHF5Sufx2WvEXZeoF0IQAAAA="
+                  },
+                  {
+                    "type": "item",
+                    "item": "H4sIAAAAAAAA/0XLMQ7CMAwF0B8qJBS6MbGycAdmzsAauUkAi9SOajNwezogsT7pRWDA/kpOt7oYqwCH8w4bLjjNLDUvdPfL1Ci/kjmtUtKjkVnqJHXANutbHECIiFnnrlLFLeL4367anHsqbL3RJ2B8cqnpx2HNXzkolMyGAAAA"
+                  },
+                  {
+                    "type": "item",
+                    "item": "H4sIAAAAAAAA/0XLMQ7CMAwF0B8qJBS6MbGycAdmzsAauUkAi9SOajNwezogsT7pRWDA/kpOt7oYqwCH8w4bLjjNLDUvdPfL1Ci/kjmtUtKjkVnqJHXANutbHECIiFnnrlLFLeL4367anHsqbL3RJ2B8cqnpx2HNXzkolMyGAAAA"
+                  },
+                  {
+                    "type": "item",
+                    "item": "H4sIAAAAAAAA/0XLMQ7CMAwF0B8qJBS6MbGycAdmzsAauUkAi9SOajNwezogsT7pRWDA/kpOt7oYqwCH8w4bLjjNLDUvdPfL1Ci/kjmtUtKjkVnqJHXANutbHECIiFnnrlLFLeL4367anHsqbL3RJ2B8cqnpx2HNXzkolMyGAAAA"
+                  },
+                  {
+                    "type": "item",
+                    "item": "H4sIAAAAAAAA/52Rz04CMRDGB1gU1sSYGG/GNPHgxXDyojEeUF9Bj5tS6tLIdkm3RL0JV0288xSIboL8TXyC6Rs5ewA84MVe2s73fdPfpD5AAbauuOU30iQq1gC7RyXIqzrsR0pLYfidPaspIxpBg+tQ6TBIVKgLUBRxW1sAyPngizhqxVpqm5Rhe5Vrxkb6ZCnkYENZ3lQCylCUj9bwrOyVsi5kgnKdm/sgNPypBJ4lA3iMfY9hafB+azsMezjDCfZxip/YZyvf5uHlSfX6tLqwHlRabc1qgp1T4N29ujcc4BhTCg4xvfjjgdwxLI4031r2/D/ZbxnOXBfn7pnoCYWAUtdlOHAdopowwvogbYYj0uk6pW2OQ1KzYafuBb/InGk4ZNQoxZHruG5lLfCytmQpPjSUleDD3uqXRDuxcRRoHsk1UVo/R5hlrSUCAAA="
+                  },
+                  {
+                    "type": "item",
+                    "item": "H4sIAAAAAAAA/52QsU7DMBCGL00CSZAQEmJjsMTAgjqxlLHAK7BGJjWJReNUjiNgQ2VEgp2nqEqzNDQDT3B+I5yhCUNY8PTr/N35OwcANuxdUUVvmMx5JgAOTz0Y8Akcp1ywSNI7dXHLZZSECRUxF3GY81jY4EZZIRQAWAEEUZbOMsGEyn3Y7/qmmWSBQWwLdriiUx6BDy57VJI2ZcdrphgI/AmV92Es6ZMHjjIAOIR8V9ACzu+7A4IfWOMXLnCDK1yQjts9uTwfX4/GW9QfzgpBUiaKP2ZZZ7CNZpVezcE/NUcEaz3HtX7Wr7g0sqWeE/zEysSlMa+xJGaJEjf6rQk1rvQLVvp92KvU1trX3IeEKwYBHHVfHhW5ytJQ0JT1tJrzAzLeR3LyAQAA"
+                  },
+                  {
+                    "type": "item",
+                    "item": "AAAAAAAAAAA="
+                  },
+                  {
+                    "type": "item",
+                    "item": "AAAAAAAAAAA="
+                  },
+                  {
+                    "type": "item",
+                    "item": "AAAAAAAAAAA="
+                  },
+                  {
+                    "type": "item",
+                    "item": "AAAAAAAAAAA="
+                  },
+                  {
+                    "type": "item",
+                    "item": "AAAAAAAAAAA="
+                  },
+                  {
+                    "type": "item",
+                    "item": "AAAAAAAAAAA="
+                  },
+                  {
+                    "type": "item",
+                    "item": "AAAAAAAAAAA="
+                  },
+                  {
+                    "type": "item",
+                    "item": "AAAAAAAAAAA="
+                  },
+                  {
+                    "type": "item",
+                    "item": "AAAAAAAAAAA="
+                  },
+                  {
+                    "type": "item",
+                    "item": "AAAAAAAAAAA="
+                  },
+                  {
+                    "type": "item",
+                    "item": "AAAAAAAAAAA="
+                  },
+                  {
+                    "type": "item",
+                    "item": "AAAAAAAAAAA="
+                  },
+                  {
+                    "type": "item",
+                    "item": "AAAAAAAAAAA="
+                  },
+                  {
+                    "type": "item",
+                    "item": "AAAAAAAAAAA="
+                  },
+                  {
+                    "type": "item",
+                    "item": "AAAAAAAAAAA="
+                  },
+                  {
+                    "type": "item",
+                    "item": "AAAAAAAAAAA="
+                  }
+                ]
+              }
+            },
+            {
+              "name": "name",
+              "value": {
+                "type": "text",
+                "text": "Помощь",
+                "parsing": "legacy"
+              }
+            },
+            {
+              "name": "custom_id",
+              "value": {
+                "type": "text",
+                "text": "MENU-Punishment.help",
+                "parsing": "legacy"
+              }
+            }
+          ]
+        },
+        {
+          "action": "player_expand_inventory_menu",
+          "values": [
+            {
+              "name": "items",
+              "value": {
+                "type": "array",
+                "values": [
+                  {
+                    "type": "item",
+                    "item": "AAAAAAAAAAA="
+                  },
+                  {
+                    "type": "item",
+                    "item": "AAAAAAAAAAA="
+                  },
+                  {
+                    "type": "item",
+                    "item": "AAAAAAAAAAA="
+                  },
+                  {
+                    "type": "item",
+                    "item": "AAAAAAAAAAA="
+                  },
+                  {
+                    "type": "item",
+                    "item": "AAAAAAAAAAA="
+                  },
+                  {
+                    "type": "item",
+                    "item": "AAAAAAAAAAA="
+                  },
+                  {
+                    "type": "item",
+                    "item": "AAAAAAAAAAA="
+                  },
+                  {
+                    "type": "item",
+                    "item": "AAAAAAAAAAA="
+                  },
+                  {
+                    "type": "item",
+                    "item": "AAAAAAAAAAA="
+                  },
+                  {
+                    "type": "item",
+                    "item": "AAAAAAAAAAA="
+                  },
+                  {
+                    "type": "item",
+                    "item": "AAAAAAAAAAA="
+                  },
+                  {
+                    "type": "item",
+                    "item": "AAAAAAAAAAA="
+                  },
+                  {
+                    "type": "item",
+                    "item": "AAAAAAAAAAA="
+                  },
+                  {
+                    "type": "item",
+                    "item": "AAAAAAAAAAA="
+                  },
+                  {
+                    "type": "item",
+                    "item": "AAAAAAAAAAA="
+                  },
+                  {
+                    "type": "item",
+                    "item": "AAAAAAAAAAA="
+                  },
+                  {
+                    "type": "item",
+                    "item": "AAAAAAAAAAA="
+                  },
+                  {
+                    "type": "item",
+                    "item": "AAAAAAAAAAA="
+                  },
+                  {
+                    "type": "item",
+                    "item": "H4sIAAAAAAAA/0XLMQ7CMAwF0B8qJBS6MbGycAdmzsAauUkAi9SOajNwezogsT7pRWDA/kpOt7oYqwCH8w4bLjjNLDUvdPfL1Ci/kjmtUtKjkVnqJHXANutbHECIiFnnrlLFLeL4367anHsqbL3RJ2B8cqnpx2HNXzkolMyGAAAA"
+                  },
+                  {
+                    "type": "item",
+                    "item": "H4sIAAAAAAAA/0XLMQ7CMAwF0B8qJBS6MbGycAdmzsAauUkAi9SOajNwezogsT7pRWDA/kpOt7oYqwCH8w4bLjjNLDUvdPfL1Ci/kjmtUtKjkVnqJHXANutbHECIiFnnrlLFLeL4367anHsqbL3RJ2B8cqnpx2HNXzkolMyGAAAA"
+                  },
+                  {
+                    "type": "item",
+                    "item": "H4sIAAAAAAAA/0XLMQ7CMAwF0B8qJBS6MbGycAdmzsAauUkAi9SOajNwezogsT7pRWDA/kpOt7oYqwCH8w4bLjjNLDUvdPfL1Ci/kjmtUtKjkVnqJHXANutbHECIiFnnrlLFLeL4367anHsqbL3RJ2B8cqnpx2HNXzkolMyGAAAA"
+                  },
+                  {
+                    "type": "item",
+                    "item": "H4sIAAAAAAAA/0XLMQoCQQxG4X9cBBntrOzsvIO1Z7Adwk7UwGwyTGLh7d1CsHwPvgxM2N8o6M7DxRQ4XnbYSMV5EeV50COug2vxoLVreTZyL52UJ2xne2sASBl5tqWbsoZnnP42zFpIL1W8N/okHF5Sufx2WvEXZeoF0IQAAAA="
+                  },
+                  {
+                    "type": "item",
+                    "item": "H4sIAAAAAAAA/0XLMQoCQQxG4X9cBBntrOzsvIO1Z7Adwk7UwGwyTGLh7d1CsHwPvgxM2N8o6M7DxRQ4XnbYSMV5EeV50COug2vxoLVreTZyL52UJ2xne2sASBl5tqWbsoZnnP42zFpIL1W8N/okHF5Sufx2WvEXZeoF0IQAAAA="
+                  },
+                  {
+                    "type": "item",
+                    "item": "H4sIAAAAAAAA/0XLMQoCQQxG4X9cBBntrOzsvIO1Z7Adwk7UwGwyTGLh7d1CsHwPvgxM2N8o6M7DxRQ4XnbYSMV5EeV50COug2vxoLVreTZyL52UJ2xne2sASBl5tqWbsoZnnP42zFpIL1W8N/okHF5Sufx2WvEXZeoF0IQAAAA="
+                  },
+                  {
+                    "type": "item",
+                    "item": "H4sIAAAAAAAA/0XLMQ7CMAwF0B8qJBS6MbGycAdmzsAauUkAi9SOajNwezogsT7pRWDA/kpOt7oYqwCH8w4bLjjNLDUvdPfL1Ci/kjmtUtKjkVnqJHXANutbHECIiFnnrlLFLeL4367anHsqbL3RJ2B8cqnpx2HNXzkolMyGAAAA"
+                  },
+                  {
+                    "type": "item",
+                    "item": "H4sIAAAAAAAA/0XLMQ7CMAwF0B8qJBS6MbGycAdmzsAauUkAi9SOajNwezogsT7pRWDA/kpOt7oYqwCH8w4bLjjNLDUvdPfL1Ci/kjmtUtKjkVnqJHXANutbHECIiFnnrlLFLeL4367anHsqbL3RJ2B8cqnpx2HNXzkolMyGAAAA"
+                  },
+                  {
+                    "type": "item",
+                    "item": "H4sIAAAAAAAA/0XLMQ7CMAwF0B8qJBS6MbGycAdmzsAauUkAi9SOajNwezogsT7pRWDA/kpOt7oYqwCH8w4bLjjNLDUvdPfL1Ci/kjmtUtKjkVnqJHXANutbHECIiFnnrlLFLeL4367anHsqbL3RJ2B8cqnpx2HNXzkolMyGAAAA"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "size",
+              "value": {
+                "type": "number",
+                "number": 3
+              }
+            }
+          ]
+        }
+      ],
+      "values": [],
+      "name": "Помощь"
+    },
+    {
+      "type": "function",
+      "position": 3,
+      "operations": [],
+      "values": [],
+      "name": "Меню"
+    }
+  ]
+}
