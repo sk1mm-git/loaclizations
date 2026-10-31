@@ -11,6 +11,11 @@
   "capture.lobby.game.shop.displayname": "&#faffbf⛨ &#effffcМᴀгᴀɜин",
   "capture.lobby.game.profile.displayname": "&#effffcПрофиль &#82ff59{0}",
 
+  "capture.lobby.event.bundle": "&#DD6A46Мешок для тыкв"
+  "capture.lobby.event.bundle.no": "&#B26852⧈ &#7A8085» &fВ мешке не хватает места! Сдайте тыквы."
+  "capture.lobby.event.pumpkin_hunt": "&#B26852⧈ &#7A8085» &fВы поймали тыкву &#D69062#{0}&f! У вас {1} тыкв."
+  "capture.lobby.event.pumpkin_sell": "&#B26852⧈ &#7A8085» &fВы сдали &#D69062#{0}&f тыкв."
+
   "capture.lobby.game.chatformat": "&#f987ff⌚ &#effffc%player_name% &#7A8085∙&#effffc {0}",
 
   "capture.profile.title": "Профиль",
